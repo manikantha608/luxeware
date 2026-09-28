@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXEWEAR — Style that speaks for you.</title>
+  <meta name="description" content="LUXEWEAR — Premium modern clothing brand. Shop Men, Women & Accessories." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="#home" class="logo" aria-label="LUXEWEAR Home">LUXEWEAR</a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#products" class="nav-link" data-filter="men">Men</a>
+        <a href="#products" class="nav-link" data-filter="women">Women</a>
+        <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="#products" class="nav-link sale-link" data-filter="sale">Sale</a>
+      </nav>
+
+      <!-- Nav Icons -->
+      <div class="nav-icons">
+        <button class="icon-btn" id="searchToggleBtn" aria-label="Toggle search">
+          <i class="fa-regular fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn cart-icon-btn" id="cartToggleBtn" aria-label="Open shopping cart">
+          <i class="fa-regular fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar" role="search" aria-hidden="true">
+      <div class="search-inner">
+        <i class="fa-regular fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search products…" aria-label="Search products" autocomplete="off" />
+        <button class="icon-btn" id="searchCloseBtn" aria-label="Close search">
+          <i class="fa-regular fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#products" class="mobile-nav-link" data-filter="men">Men</a>
+      <a href="#products" class="mobile-nav-link" data-filter="women">Women</a>
+      <a href="#new-arrivals" class="mobile-nav-link">New Arrivals</a>
+      <a href="#products" class="mobile-nav-link sale-link" data-filter="sale">Sale</a>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home" aria-label="Hero banner">
+    <div class="hero-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1800&q=80"
+        alt="Fashion model in premium clothing"
+        class="hero-img"
+        loading="eager"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content animate-fade-up">
+      <span class="hero-eyebrow">New Season — 2026</span>
+      <h1 class="hero-heading">DEFINE YOUR<br />STYLE</h1>
+      <p class="hero-desc">Curated collections crafted for those who believe clothing is a form of self-expression.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-primary hero-btn" data-filter="men">Shop Men</a>
+        <a href="#products" class="btn btn-outline-light hero-btn" data-filter="women">Shop Women</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE STRIP ========== -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Free Shipping on orders above ₹2,999</span>
+      <span class="marquee-dot">·</span>
+      <span>New Arrivals Every Week</span>
+      <span class="marquee-dot">·</span>
+      <span>Up to 40% Off Sale Now Live</span>
+      <span class="marquee-dot">·</span>
+      <span>Easy 30-Day Returns</span>
+      <span class="marquee-dot">·</span>
+      <span>Free Shipping on orders above ₹2,999</span>
+      <span class="marquee-dot">·</span>
+      <span>New Arrivals Every Week</span>
+      <span class="marquee-dot">·</span>
+      <span>Up to 40% Off Sale Now Live</span>
+      <span class="marquee-dot">·</span>
+      <span>Easy 30-Day Returns</span>
+      <span class="marquee-dot">·</span>
+    </div>
+  </div>
+
+  <!-- ========== CATEGORIES SECTION ========== -->
+  <section class="categories section" id="categories" aria-label="Shop by category">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Shop by</span>
+        <h2 class="section-title">Category</h2>
+      </div>
+      <div class="category-grid">
+
+        <article class="category-card">
+          <div class="category-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=75"
+              alt="Men's fashion collection"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-info">
+            <h3>Men's Collection</h3>
+            <a href="#products" class="category-link" data-filter="men">Explore Collection <i class="fa-regular fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <div class="category-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=75"
+              alt="Women's fashion collection"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-info">
+            <h3>Women's Collection</h3>
+            <a href="#products" class="category-link" data-filter="women">Explore Collection <i class="fa-regular fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <div class="category-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=75"
+              alt="Fashion accessories collection"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-info">
+            <h3>Accessories</h3>
+            <a href="#products" class="category-link" data-filter="accessories">Explore Collection <i class="fa-regular fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEW ARRIVALS / PRODUCTS ========== -->
+  <section class="products-section section" id="new-arrivals" aria-label="New arrivals product listing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Fresh Drops</span>
+        <h2 class="section-title" id="products">New Arrivals</h2>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Filter products by category">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-tab" data-filter="men" role="tab" aria-selected="false">Men</button>
+        <button class="filter-tab" data-filter="women" role="tab" aria-selected="false">Women</button>
+        <button class="filter-tab" data-filter="accessories" role="tab" aria-selected="false">Accessories</button>
+        <button class="filter-tab sale-tab" data-filter="sale" role="tab" aria-selected="false">Sale</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid" role="list" aria-label="Product list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- No Results -->
+      <div class="no-results" id="noResults" aria-live="polite" hidden>
+        <i class="fa-regular fa-face-sad-tear"></i>
+        <p>No products found.</p>
+        <button class="btn btn-secondary" id="clearSearchBtn">Clear Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROMO BANNER ========== -->
+  <section class="promo-banner" aria-label="Promotional sale banner">
+    <div class="promo-img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1800&q=75"
+        alt="Fashion model in sale collection"
+        loading="lazy"
+      />
+      <div class="promo-overlay"></div>
+    </div>
+    <div class="promo-content animate-fade-up">
+      <span class="promo-eyebrow">Limited Time</span>
+      <h2 class="promo-heading">UP TO 40% OFF</h2>
+      <p class="promo-desc">Refresh your wardrobe with our seasonal collection.</p>
+      <a href="#products" class="btn btn-white" data-filter="sale">Shop Sale</a>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED COLLECTION ========== -->
+  <section class="featured section" aria-label="Featured everyday collection">
+    <div class="container">
+      <div class="featured-grid">
+        <div class="featured-images">
+          <div class="featured-img-main">
+            <img
+              src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=900&q=75"
+              alt="Premium everyday wardrobe essentials"
+              loading="lazy"
+            />
+          </div>
+          <div class="featured-img-secondary">
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=75"
+              alt="Everyday minimal fashion look"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="featured-text">
+          <span class="section-eyebrow">Curated for You</span>
+          <h2 class="featured-heading">THE EVERYDAY<br />EDIT</h2>
+          <p class="featured-desc">Timeless essentials designed to fit effortlessly into your everyday wardrobe. Simple, refined, and built to last.</p>
+          <a href="#new-arrivals" class="btn btn-primary">Explore Collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="newsletter section" aria-label="Newsletter signup">
+    <div class="container">
+      <div class="newsletter-inner">
+        <span class="section-eyebrow">Join the Club</span>
+        <h2 class="newsletter-title">Stay in the loop.</h2>
+        <p class="newsletter-desc">Get updates about new collections, exclusive offers, and more.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <div class="newsletter-input-wrap">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Enter your email address"
+              aria-label="Email address for newsletter"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="newsletter-error" id="newsletterError" role="alert" aria-live="polite"></p>
+          <p class="newsletter-success" id="newsletterSuccess" role="status" aria-live="polite" hidden>
+            <i class="fa-regular fa-circle-check"></i> You're subscribed! Welcome to LUXEWEAR.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="footer-logo">LUXEWEAR</span>
+          <p class="footer-tagline">Style that speaks for you.</p>
+          <p class="footer-about">Premium, minimal clothing crafted for the modern individual. Quality over quantity — always.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#products">Men</a></li>
+            <li><a href="#products">Women</a></li>
+            <li><a href="#products">Accessories</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#products">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping &amp; Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Track My Order</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LUXEWEAR. All rights reserved. &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CART DRAWER ========== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cart-header">
+      <h2>Your Cart <span class="cart-count-label" id="cartItemCount"></span></h2>
+      <button class="icon-btn" id="cartCloseBtn" aria-label="Close cart">
+        <i class="fa-regular fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fa-regular fa-bag-shopping"></i>
+        <p>Your cart is empty.</p>
+        <button class="btn btn-primary" id="cartContinueBtn">Continue Shopping</button>
+      </div>
+      <ul class="cart-items" id="cartItems" aria-label="Cart items"></ul>
+    </div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <p class="cart-note">Shipping &amp; taxes calculated at checkout.</p>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Checkout</button>
+      <button class="btn btn-ghost btn-full" id="clearCartBtn">Clear Cart</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <!-- ========== CHECKOUT NOTICE MODAL ========== -->
+  <div class="modal-overlay" id="checkoutOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" hidden>
+    <div class="checkout-modal">
+      <button class="modal-close" id="checkoutCloseBtn" aria-label="Close checkout notice">
+        <i class="fa-regular fa-xmark"></i>
+      </button>
+      <div class="checkout-icon"><i class="fa-regular fa-lock"></i></div>
+      <h2 id="checkoutTitle">Demo Checkout</h2>
+      <p>Payment integration can be added here.</p>
+      <p class="checkout-sub">This is a portfolio demo. Connect your preferred payment gateway (Razorpay, Stripe, etc.) to enable real transactions.</p>
+      <button class="btn btn-primary" id="checkoutCloseBtn2">Got it</button>
+    </div>
+  </div>
+
+  <!-- ========== PRODUCT QUICK VIEW MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalProductName" hidden>
+    <div class="modal" id="quickViewModal">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close product quick view">
+        <i class="fa-regular fa-xmark"></i>
+      </button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" id="modalImage" />
+          <span class="sale-badge modal-badge" id="modalBadge" hidden></span>
+        </div>
+        <div class="modal-info">
+          <span class="modal-category" id="modalCategory"></span>
+          <h2 class="modal-product-name" id="modalProductName"></h2>
+          <div class="modal-price-wrap">
+            <span class="modal-price" id="modalPrice"></span>
+            <span class="modal-original-price" id="modalOriginalPrice"></span>
+          </div>
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <div class="modal-sizes">
+            <p class="size-label">Select Size</p>
+            <div class="size-options" role="group" aria-label="Select size">
+              <button class="size-btn" data-size="XS">XS</button>
+              <button class="size-btn" data-size="S">S</button>
+              <button class="size-btn active" data-size="M">M</button>
+              <button class="size-btn" data-size="L">L</button>
+              <button class="size-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <div class="modal-qty">
+            <p class="size-label">Quantity</p>
+            <div class="qty-control">
+              <button class="qty-btn" id="modalQtyMinus" aria-label="Decrease quantity">
+                <i class="fa-regular fa-minus"></i>
+              </button>
+              <span class="qty-value" id="modalQtyValue">1</span>
+              <button class="qty-btn" id="modalQtyPlus" aria-label="Increase quantity">
+                <i class="fa-regular fa-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-full modal-add-cart" id="modalAddToCart">
+            <i class="fa-regular fa-bag-shopping"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TOAST NOTIFICATION ========== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
